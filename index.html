@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script src= "//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+      $('h1').click(function() {
+        alert("you clicked a header");
+      });
+      $("#button1").click(function() {
+        var word = $('#select').val();
+        $("#" + word).html("Google the meaning of the word " + word);
+        var color = $('#color1212').val();
+        $("#color1").css('background-color', color);
+        var name = $('input[name="rWord"]:checked').val();
+        alert(name+" is not your real name..... try picking your real name.");
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="color1">
+    <h1>Word Generator</h1>
+
     
-        $(function(){
-          
-        });
-        
-    </script>
-  </head>
-  <body>
-  <h1>Goodbye World</h1>
-  </body>
+      <p>1. What is your name?</p>
+      <div = "name1">
+      <input type="radio" name="rWord" value= "gth"> hguehfe
+      <input type="radio" name="rWord">
+      <input type="radio" name="rWord">
+      <br>
+    </div>
+
+
+    <div id="color13">
+      <p>2. what is your favorite color?</p>
+      <input type="text" id="color1212">
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <p>3. What is the funniest word below? </p>
+    <p id="Abibliophobia">Abibliophobia</p>
+    <p id="Brouhaha">Brouhaha</p>
+    <p id="Cockamamie">Cockamamie</p>
+    <p id="Eructation">Eructation</p>
+
+    <br>
+    <p>4. Choose the word and press submit.</p>
+
+    <select id="select">
+      <option value="Abibliophobia">Abibliophobia</option>
+      <option value="Brouhaha">Brouhaha</option>
+      <option value="Cockamamie">Cockamamie</option>
+      <option value="Eructation">Eructation</option>
+    </select>
+
+    <br>
+    <br>
+
+    <button id="button1" type="button">submit</button>
+  </div>
+
+</body>
+
 </html>
-tdegegfyeg
